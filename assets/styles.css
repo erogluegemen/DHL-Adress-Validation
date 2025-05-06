@@ -1,0 +1,133 @@
+:root {
+  --dhl-yellow: #FFCC00;
+  --dhl-yellow-light: #FFDE59;
+  --dhl-yellow-lighter: #FFF0B2;
+  --dhl-red: #D40511;
+  --white: #FFFFFF;
+  --black: #000000;
+}
+
+/* --- General Setup --- */
+html, body, [data-testid="stApp"] {
+  background-color: var(--white);
+  color: var(--black);
+  font-family: 'serif';
+}
+
+/* --- Header and Logo --- */
+header[data-testid="stHeader"] {
+  background: linear-gradient(90deg, var(--dhl-yellow) 0%, var(--dhl-yellow-light) 65%, var(--dhl-yellow-lighter) 100%);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+header[data-testid="stHeader"]::before {
+  content: "";
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/DHL_Logo.svg/2560px-DHL_Logo.svg.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 130px;
+  height: 50px;
+  margin-top: 32px;
+  margin-right: 20px;
+  margin-left: 10px;
+}
+
+/* --- App Title --- */
+.app-title {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+h1, h2, h3, h4, h5 {
+  color: var(--dhl-red);
+  font-family: 'serif';
+  font-weight: bold;
+}
+
+/* --- Slider --- */
+.stSlider > label {
+  color: var(--dhl-red);
+  font-weight: 600;
+}
+.stSlider div[data-testid="stSlider"] div div:nth-child(2),
+.stSlider div[data-testid="stSlider"] div div:nth-child(3) {
+  background-color: var(--dhl-red);
+}
+
+/* --- Button Styling (Red and Clean) --- */
+button[data-testid="stBaseButton-secondary"] {
+  background-color: var(--dhl-red) !important;
+  color: white !important;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 14px;
+}
+button[data-testid="stBaseButton-secondary"]:hover {
+  background-color: var(--dhl-yellow) !important;
+  color: black !important;
+}
+
+.st-emotion-cache-ca7r1c {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: #D40511 !important;
+    border-radius: 0.5rem;
+    color: white !important; 
+}
+
+/* --- Table Styling --- */
+.dhl-table-wrapper {
+  border-top: 5px solid var(--dhl-red);
+  border-bottom: 5px solid var(--dhl-red);
+  margin: 32px 0;
+}
+.dhl-table-wrapper h3 {
+  color: var(--dhl-red);
+  font-size: 20px;
+}
+.dhl-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.dhl-table th {
+  text-align: left;
+  font-weight: bold;
+  padding: 8px 12px;
+  background-color: #ffffff;
+  border-bottom: 2px solid var(--black);
+}
+.dhl-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #ccc;
+}
+.dhl-table tr[style*="background-color:#D40511"] td {
+  color: white !important;
+  font-weight: 500;
+}
+
+/* --- Download Button Center --- */
+.download-button-container a {
+  display: inline-block;
+  padding: 10px 20px;
+  font-weight: bold;
+  background-color: #D40511;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-family: serif;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+/* --- Page Container Width --- */
+.main .block-container {
+  max-width: 960px;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
